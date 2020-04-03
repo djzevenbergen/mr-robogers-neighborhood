@@ -73,7 +73,7 @@ var partyMode = function () {
   var images = ["img/rogersheadupleft.jpg", "img/rogersheaddownleft.jpg", "img/rogersheadupright.jpg", "img/rogersheaddownright.jpg", "img/rogersheadupright.jpg"];
   var i = 0;
 
-  var snd = new Audio("music/flat_beat.mp3");
+  snd = new Audio("music/flat_beat.mp3");
   snd.play();
 
   //$("#music").show();
@@ -84,6 +84,7 @@ var partyMode = function () {
   $("#rogers").hide();
   $("#rogers2").hide();
   $("#rogers3").show();
+  $("#slider").removeClass("hidden");
   $("#rogers3").src = "img/rogersheaddownright.jpg"
 
 
@@ -96,6 +97,10 @@ var partyMode = function () {
       i++;
     }
   }, 232);
+}
+
+function SetVolume(val) {
+  snd.volume = val / 100;
 }
 
 //User interface
@@ -129,5 +134,9 @@ $(document).ready(function () {
     $("#again").click(function () {
       window.location.reload();
     });
+    $("#myRange").oninput = setVolume($("#myRange").val());
   });
+
+
+
 });
