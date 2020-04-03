@@ -84,18 +84,3 @@ body {
   border-bottom-width: 5px;
   border-bottom-color: black;
 }
-
-.rog {
-width:80%;
-z-index: 0;  
-}
-
-.text-over-img {
-	z-index:1;
-	font-size: 1.2em;
-	margin-top: -100px;
-}
-
-
-
-
