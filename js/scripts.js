@@ -67,13 +67,16 @@ var printLine = function (final) {
   }
 }
 
-
-
 //party mode
 var partyMode = function () {
+
   var images = ["img/rogersheadupleft.jpg", "img/rogersheaddownleft.jpg", "img/rogersheadupright.jpg", "img/rogersheaddownright.jpg", "img/rogersheadupright.jpg"];
   var i = 0;
-  $("#music").show();
+
+  var snd = new Audio("music/flat_beat.mp3");
+  snd.play();
+
+  //$("#music").show();
   $("body").toggleClass("partyBody");
   $("#ope").toggleClass("ope");
   $("#resultBox").fadeIn();
@@ -84,22 +87,18 @@ var partyMode = function () {
   $("#rogers3").src = "img/rogersheaddownright.jpg"
 
 
-  var renew = setInterval(function () {
+  setInterval(function () {
     if (images.length == i) {
       i = 0;
     }
     else {
       document.getElementById("rogers3").src = images[i];
       i++;
-
     }
-  }, 500);
-
-  renew();
+  }, 232);
 }
 
 //User interface
-
 
 $(document).ready(function () {
   $("#userForm").submit(function (event) {
@@ -111,11 +110,11 @@ $(document).ready(function () {
     var userArray = createArray(userNumber, isReversed);
     var finalArray = changeArray(userArray, userName);
 
-
     printLine(finalArray);
-    //$("#output").text(finalArray);
+
+
     $("#rogers").hide();
-    if (userNumber === 420) {
+    if (userNumber === 2020) {
       partyMode();
     } else if (userNumber % 2 === 0) {
       $("#rogers2").show();
@@ -129,13 +128,6 @@ $(document).ready(function () {
     $("#again").slideDown();
     $("#again").click(function () {
       window.location.reload();
-
     });
-
-
-
   });
-
-
-
 });

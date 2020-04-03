@@ -91,6 +91,8 @@ body {
 
 #music {
   display: none;
+  float: inherit;
+  padding-left: 25%;
 }
 
 @keyframes bgcolor {
