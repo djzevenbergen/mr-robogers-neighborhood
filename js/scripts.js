@@ -87,7 +87,14 @@ $(document).ready(function () {
     printLine(finalArray);
     //$("#output").text(finalArray);
     $("#rogers").hide();
-    $("#rogers2").show();
+    if (userNumber % 2 === 0) {
+      $("#rogers2").show();
+      $("#rogers3").hide();
+    } else {
+      $("#rogers3").show();
+      $("#rogers2").hide();
+    }
+
     $("#resultBox").fadeIn();
     $("#again").slideDown();
     $("#again").click(function () {

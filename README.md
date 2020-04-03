@@ -7,7 +7,7 @@
 
 ## Description
 
-_This web applicaation uses looping and arrays to return a message in which all numbers that include the digit 3 are replaced by "Won't you be my neighbor?", all numbers with digit 2 are replaced with the word "Boop!", and all numbers with digit 3 are replaced with the word "Beep!"._
+_This web applicaation uses looping and arrays to return a message in which all numbers that include the digit 3 are replaced by "Won't you be my neighbor?", all numbers with digit 2 are replaced with the word "Boop!", all numbers with digit 3 are replaced with the word "Beep!", and all numbers that are divisible by 3 are replaced with "Won't you be my neighbor, " followed by the user's name._
 
 ## Setup/Installation Requirements
 
