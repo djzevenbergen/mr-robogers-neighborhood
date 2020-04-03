@@ -87,6 +87,12 @@ $(document).ready(function () {
     printLine(finalArray);
     //$("#output").text(finalArray);
     $("#resultBox").fadeIn();
+    $("#again").slideDown();
+    $("#again").click(function () {
+      window.location.reload();
+
+    });
+
 
 
   });
