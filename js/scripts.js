@@ -21,20 +21,27 @@ var changeArray = function (array) {
   var newArray = [];
 
   localArrays.forEach(function (locArr) {
-    var contains = false;
-    //alert(locArr);
+    var contains1 = false;
+    var contains2 = false;
+    var contains3 = false;
+    var div3 = false;
     var lo = locArr.toString();
     var sp = lo.split('');
-    //alert(locArr.toString());
+
     for (i = 0; i < sp.length; i++) {
-      //alert(locArr);
-      if (sp[i] === '1') {
-        contains = true;
+
+      if (sp[i] === '2') {
+        contains2 = true;
+      } else if (sp[i] === '1') {
+        contains1 = true;
       }
-    };
-    if (contains === true) {
+    }
+
+
+    if (contains2 === true) {
+      newArray.push("Boop!")
+    } else if (contains1 === true) {
       newArray.push("Beep!")
-      //alert("hi");
 
     } else {
       newArray.push(locArr);
@@ -58,7 +65,6 @@ $(document).ready(function () {
     //alert(createArray(userNumber, isReversed));
 
     var userArray = createArray(userNumber, isReversed);
-    alert(userArray);
 
     alert(changeArray(userArray));
 
