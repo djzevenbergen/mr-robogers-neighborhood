@@ -31,10 +31,13 @@ var changeArray = function (array, name) {
     var greeting = "Won't you be my neighbor, " + name + "?";
     //alert(locArr);
     for (i = 0; i < sp.length; i++) {
-      if (locArr > 0) {
-        if (locArr % 3 === 0) {
+
+      if (locArr % 3 === 0) {
+        if (locArr > 0) {
           div3 = true;
         }
+
+
       } else if (sp[i] === '3') {
         contains3 = true;
       } else if (sp[i] === '2') {
