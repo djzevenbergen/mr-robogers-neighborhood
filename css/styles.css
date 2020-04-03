@@ -1,3 +1,8 @@
 .hidden {
   display: none;
 }
+
+#rogers {
+  float: right;
+  width: 70%;
+}

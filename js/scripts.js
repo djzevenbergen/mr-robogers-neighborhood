@@ -16,7 +16,7 @@ var createArray = function (number, rev) {
 
 }
 
-var changeArray = function (array) {
+var changeArray = function (array, name) {
   var localArrays = array.slice();
   var newArray = [];
 
@@ -28,9 +28,14 @@ var changeArray = function (array) {
     var lo = locArr.toString();
     var sp = lo.split('');
 
+    var greeting = "Won't you be my neighbor, " + name + "?";
+    //alert(locArr);
     for (i = 0; i < sp.length; i++) {
-
-      if (sp[i] === '3') {
+      if (locArr > 0) {
+        if (locArr % 3 === 0) {
+          div3 = true;
+        }
+      } else if (sp[i] === '3') {
         contains3 = true;
       } else if (sp[i] === '2') {
         contains2 = true;
@@ -39,7 +44,10 @@ var changeArray = function (array) {
       }
     }
 
-    if (contains3 === true) {
+    if (div3 === true) {
+
+      newArray.push(greeting);
+    } else if (contains3 === true) {
       newArray.push("Won't you be my neighbor?")
     } else if (contains2 === true) {
       newArray.push("Boop!")
@@ -50,6 +58,9 @@ var changeArray = function (array) {
       newArray.push(locArr);
     }
   });
+
+  //newArray = newArray.slice(1);
+  //newArray.unshift(0);
 
   return newArray;
 
@@ -65,11 +76,12 @@ $(document).ready(function () {
     event.preventDefault();
     var userNumber = parseInt($("#numberForm").val());
     var isReversed = document.getElementById("revCheckbox").checked;
-    //alert(createArray(userNumber, isReversed));
+    var userName = $("#textForm").val();
 
     var userArray = createArray(userNumber, isReversed);
 
-    alert(changeArray(userArray));
+
+    $("#output").text(changeArray(userArray, userName));
 
 
   });
