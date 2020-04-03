@@ -13,7 +13,6 @@ var createArray = function (number, rev) {
   } else {
     return numArray;
   }
-
 }
 
 var changeArray = function (array, name) {
@@ -27,17 +26,14 @@ var changeArray = function (array, name) {
     var div3 = false;
     var lo = locArr.toString();
     var sp = lo.split('');
-
     var greeting = "Won't you be my neighbor, " + name + "?";
-    //alert(locArr);
+
     for (i = 0; i < sp.length; i++) {
 
       if (locArr % 3 === 0) {
         if (locArr > 0) {
           div3 = true;
         }
-
-
       } else if (sp[i] === '3') {
         contains3 = true;
       } else if (sp[i] === '2') {
@@ -48,7 +44,6 @@ var changeArray = function (array, name) {
     }
 
     if (div3 === true) {
-
       newArray.push(greeting);
     } else if (contains3 === true) {
       newArray.push("Won't you be my neighbor?")
@@ -62,9 +57,6 @@ var changeArray = function (array, name) {
     }
   });
 
-  //newArray = newArray.slice(1);
-  //newArray.unshift(0);
-
   return newArray;
 
 };
@@ -72,6 +64,7 @@ var changeArray = function (array, name) {
 
 
 
+//User interface
 
 
 $(document).ready(function () {
@@ -85,6 +78,7 @@ $(document).ready(function () {
 
 
     $("#output").text(changeArray(userArray, userName));
+    $("#resultBox").show();
 
 
   });
