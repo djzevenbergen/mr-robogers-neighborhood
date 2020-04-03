@@ -1,12 +1,20 @@
-var createArray = function (number) {
+var createArray = function (number, rev) {
   var numArray = [];
-  var intermediateArray = numArray.slice();
 
   for (let i = 0; i <= number; i++) {
     numArray.push(i);
   }
 
-  return numArray;
+  var intermediateArray = numArray.slice();
+
+  if (rev === true) {
+    intermediateArray.reverse();
+    return intermediateArray;
+  } else {
+    return numArray;
+  }
+
+
 
 }
 
@@ -18,8 +26,8 @@ $(document).ready(function () {
   $("#userForm").submit(function (event) {
     event.preventDefault();
     var userNumber = parseInt($("#numberForm").val());
-
-    alert(createArray(userNumber));
+    var isReversed = document.getElementById("revCheckbox").checked;
+    alert(createArray(userNumber, isReversed));
 
 
   });
