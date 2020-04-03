@@ -30,15 +30,18 @@ var changeArray = function (array) {
 
     for (i = 0; i < sp.length; i++) {
 
-      if (sp[i] === '2') {
+      if (sp[i] === '3') {
+        contains3 = true;
+      } else if (sp[i] === '2') {
         contains2 = true;
       } else if (sp[i] === '1') {
         contains1 = true;
       }
     }
 
-
-    if (contains2 === true) {
+    if (contains3 === true) {
+      newArray.push("Won't you be my neighbor?")
+    } else if (contains2 === true) {
       newArray.push("Boop!")
     } else if (contains1 === true) {
       newArray.push("Beep!")
