@@ -31,21 +31,22 @@ var changeArray = function (array) {
       if (sp[i] === '1') {
         contains = true;
       }
-      if (contains === true) {
-        newArray.push("Beep!")
-        //alert("hi");
-
-      } else {
-        newArray.push(locArr);
-      }
     };
+    if (contains === true) {
+      newArray.push("Beep!")
+      //alert("hi");
 
-
-
+    } else {
+      newArray.push(locArr);
+    }
   });
+
   return newArray;
 
 };
+
+
+
 
 
 
