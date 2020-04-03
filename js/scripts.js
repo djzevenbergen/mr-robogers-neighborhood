@@ -86,6 +86,8 @@ $(document).ready(function () {
 
     printLine(finalArray);
     //$("#output").text(finalArray);
+    $("#rogers").hide();
+    $("#rogers2").show();
     $("#resultBox").fadeIn();
     $("#again").slideDown();
     $("#again").click(function () {

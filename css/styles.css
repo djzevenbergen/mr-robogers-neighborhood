@@ -11,6 +11,11 @@
   display: none;
 }
 
+#rogers2 {
+  display: none;
+  width: 50%;
+}
+
 #again {
   display: none;
 }
