@@ -85,36 +85,17 @@ body {
   border-bottom-color: black;
 }
 
-.info h2 {
-  display: none;
+.rog {
+width:80%;
+z-index: 0;  
+}
+
+.text-over-img {
+	z-index:1;
+	font-size: 1.2em;
+	margin-top: -100px;
 }
 
 
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-.close {
-  color: rebeccapurple;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color:green;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 
-/*userlist css*/
-.userList {
-  display: none;
-  border: solid 3px black;
-}
