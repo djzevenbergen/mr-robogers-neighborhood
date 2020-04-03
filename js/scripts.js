@@ -56,10 +56,16 @@ var changeArray = function (array, name) {
       newArray.push(locArr);
     }
   });
-
   return newArray;
-
 };
+
+var printLine = function (final) {
+  $("#output").html("");
+  for (let i = 0; i < final.length; i++) {
+    $("#output").append("<p>" + final[i] + "</p>");
+
+  }
+}
 
 
 
@@ -75,10 +81,12 @@ $(document).ready(function () {
     var userName = $("#textForm").val();
 
     var userArray = createArray(userNumber, isReversed);
+    var finalArray = changeArray(userArray, userName);
 
 
-    $("#output").text(changeArray(userArray, userName));
-    $("#resultBox").show();
+    printLine(finalArray);
+    //$("#output").text(finalArray);
+    $("#resultBox").fadeIn();
 
 
   });
